@@ -3,7 +3,7 @@
 </p>
 
 <h1>Inspecting Traffic Between Azure Virtual Machines</h1>
-In this lab, I will be observing different kinds of network traffic to and from Azure virtual machines using WireShark which will be install in one of the VMs. Also, I will be experimenting with Netwrok security groups. <br />
+In this lab, I will be observing different kinds of network traffic to and from Azure virtual machines using WireShark which will be install in one of the VMs. Also, I will be experimenting with Network security groups. <br />
 
 <h2>Environments and Technologies Used</h2>
 
@@ -18,10 +18,10 @@ In this lab, I will be observing different kinds of network traffic to and from 
 - Windows 10 Pro (21H2)
 - Ubuntu Server 20.04
 
-<h2>The Set-Up</h2>
-
-Within Azure, I created two VMs within the same virtual network to ensure that they are able to communicate with each other. One VM will have Windows 10 Pro while the other uses Ubuntu. The Windows VM will connect to the other via the command line/PowerShell. 
-
+<h2>The Set-Up</h2> 
+Within Azure, I created two VMs within the same virtual network (Vnet) to ensure that they are able to communicate with each other. One VM will have Windows 10 Pro while the other uses Ubuntu. The Windows VM will connect to the other via the command line/PowerShell. 
+<h3>Note:</h3>  I will not be showing how to create the VMs or Resource Groups because that would only "inflate" the lab.
+ 
 <h2>Actions and Observations</h2>
 
 <p>
