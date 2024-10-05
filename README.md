@@ -3,9 +3,7 @@
 </p>
 
 <h1>Inspecting Traffic Between Azure Virtual Machines</h1>
-In this lab, I observe different kinds of network traffic to and from Azure virtual machines with Wireshark as well as experiment with network security groups. <br />
-
-
+In this lab, I will be observing different kinds of network traffic to and from Azure virtual machines using WireShark which will be install in one of the VMs. Also, I will be experimenting with Netwrok security groups. <br />
 
 <h2>Environments and Technologies Used</h2>
 
