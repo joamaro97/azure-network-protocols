@@ -20,6 +20,7 @@ In this lab, I will be observing different kinds of network traffic to and from 
 
 <h2>The Set-Up</h2> 
 Within Azure, I created two VMs within the same virtual network (Vnet) to ensure that they are able to communicate with each other. One VM will have Windows 10 Pro while the other uses Ubuntu. The Windows VM will connect to the other via the command line/PowerShell. 
+
 <h3>Note:</h3>  I will not be showing how to create the VMs or Resource Groups because that would only "inflate" the lab.
  
 <h2>Actions and Observations</h2>
