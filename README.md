@@ -28,10 +28,17 @@ I will not be showing how to create the VMs or Resource Groups because that woul
 <h2>Actions and Observations</h2>
 
 <p>
-<img src="https://i.imgur.com/DutP0XT.png" height="80%" width="80%" alt="Azure Networking Steps"/>
+<img src="https://i.imgur.com/1EY95x6.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
+
+First, I opened Remote Desktop Connection (RPC) and I use the credentials from the virtual machine I created before (user, password and VM's public IP address) 
+
 <p>
-Using Remote Desktop Connection, I connect to the Windows VM using its public IP address. From there, I installed Wireshark in order to begin inspecting traffic. 
+<img src="https://i.imgur.com/lzyrkI2.png" height="80%" width="80%" alt="Azure Networking Steps"/>
+</p>
+
+<p>
+Once I connected to the virtual machine, I went to the browser to download Wireshark which is going help me to see what is going on in the network. 
 </p>
 <br />
 
