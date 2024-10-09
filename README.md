@@ -99,5 +99,4 @@ To finish my lab, I decided to observe RDP traffic. The filter for Wireshark is 
 <br />
 
 <h2>Lessons Learned </h2>
-
-The purpose of this lab is for me to see how different protocols and ports are utilized in a network between devices. While this lab does not exactly allow me to troubleshoot, it still serves a purpose to gather information. While troubleshooting, I need to utilize different tools like Wireshark and the command line to see how traffic flows in a network through ports and protocols. Familiarity and an inquisitive mind are key to success!
+While this lab did not allow me to do any troubleshooting, it still serves the purpose to gather information throught the network. With this lab, I can get familiar in how different protocols and ports are utilized in a network between devices. I know that getting familiar in how these systems and commands work I figure it out solutions for any issue a client might have.
