@@ -51,7 +51,7 @@ Within Wireshark, I filtered for ICMP (Internet Control Message Protocol) traffi
 <br />
 
 <p>
-<img src="https://i.imgur.com/HTga2Iq.png" height="80%" width="80%" alt="Azure Networking Steps"/>
+<img src="https://i.imgur.com/y7dCDR5.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
 Within the Azure portal, I opened the networking settings for the Ubuntu VM and added an inbound security rule to block ICMP traffic. I make sure to have the priority higher than SSH (300) to ensure the rule applies first. 
@@ -59,7 +59,7 @@ Within the Azure portal, I opened the networking settings for the Ubuntu VM and 
 <br />
 
 <p>
-<img src="https://i.imgur.com/i3BC2LW.png" height="80%" width="80%" alt="Azure Networking Steps"/>
+<img src="https://i.imgur.com/p8GKYp8.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
 Upon returning to the Windows VM, I notice that the ICMP traffic is blocked now that the inbound security rule is in place. After changing the rule to allow traffic again, the perpetual ping resolves without timing out. 
