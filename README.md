@@ -46,7 +46,7 @@ Once I connected to the virtual machine, I went to the browser to download Wires
 <img src="https://i.imgur.com/8IcSRqK.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
-Within Wireshark, I filtered for ICMP (Internet Control Message Protocol) traffic and opened PowerShell to execute a command called ping. Ping utilizes ICMP, which is used by devices in a network to communicate problems within data transmition. I used ping to see if I can communicate with the Ubuntu VM using its private IP address and with google.com. Afterwards, I used a perpetual ping to the Ubuntu VM in order to see how network security groups work. I executed the perpetual ping with the command: ping -t (ip address).
+Within Wireshark, I filtered for ICMP (Internet Control Message Protocol) traffic and opened PowerShell to execute a command called ping. Ping utilizes ICMP, which is used by devices in a network to communicate problems within data transmition. I used ping to see if I can communicate with the Ubuntu VM using its private IP address. Afterwards, I used a perpetual ping to the Ubuntu VM in order to see how network security groups work. I executed the perpetual ping with the command: ping -t (ip address).
 </p>
 <br />
 
@@ -54,7 +54,7 @@ Within Wireshark, I filtered for ICMP (Internet Control Message Protocol) traffi
 <img src="https://i.imgur.com/y7dCDR5.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
-Within the Azure portal, I opened the networking settings for the Ubuntu VM and added an inbound security rule to block ICMP traffic. I make sure to have the priority higher than SSH (300) to ensure the rule applies first. 
+Now, I am going to block the ICMP traffic and watch wireshark to see what happened in that connection. In Azure,  I opened the networking settings for the Ubuntu VM and added an inbound security rule to block ICMP traffic. I make sure to have the priority higher than SSH (310) to ensure the rule applies first. 
 </p>
 <br />
 
@@ -62,7 +62,7 @@ Within the Azure portal, I opened the networking settings for the Ubuntu VM and 
 <img src="https://i.imgur.com/p8GKYp8.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
-Upon returning to the Windows VM, I notice that the ICMP traffic is blocked now that the inbound security rule is in place. After changing the rule to allow traffic again, the perpetual ping resolves without timing out. 
+Coming back to the windows VM, I noticed the connection have been interrupted it or as shown in powershell "request timed out". After changing the rule to allow traffic again, the perpetual ping resolves without timing out. 
 </p>
 <br />
 
@@ -70,7 +70,7 @@ Upon returning to the Windows VM, I notice that the ICMP traffic is blocked now 
 <img src="https://i.imgur.com/hC6K1uG.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
-Next, I chose to examine SSH traffic. I logged in to the Ubuntu server via PowerShell with the ssh command. With Wireshark, I filtered the traffic with tcp.port == 22. While logged into the Ubuntu server, my session is logged in Wireshark with each command I use.
+Next, I chose to examine SSH traffic. I logged in to the Ubuntu server via PowerShell with the ssh command. With Wireshark, I filtered the traffic with SSH (I could also use tcp.port == 22 to filter it. While logged into the Ubuntu server, my session is logged in Wireshark with each command I use.
 </p>
 <br />
 
@@ -83,10 +83,10 @@ After examining SSH traffic, I exited the Ubuntu server in order to filter for D
 <br />
 
 <p>
-<img src="https://i.imgur.com/2f4O9ZX.png" height="80%" width="80%" alt="Azure Networking Steps"/>
+<img src="https://i.imgur.com/5rO7PIn.png" height="80%" width="80%" alt="Azure Networking Steps"/>
 </p>
 <p>
-To observe DNS traffic, I used the filter udp.port == 53 and the command nslookup. I wanted to see the results that are from looking up google.com and disney.com, two very popular sites. 
+Then I use the filter DNS to observe its traffic (again I could also use a different filter like udp.port == 53) and the command "nslookup". I use the command to see which result I would get from looking up google.com. 
 </p>
 <br />
 
